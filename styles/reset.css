@@ -1,0 +1,44 @@
+@charset "UTF-8"; 
+/* css 태그별 default 설정 */ 
+html {height: 100%; margin: 0; padding: 0; line-height: 1.15; -webkit-text-size-adjust: 100%; font-family: 'Noto Sans KR', sans-serif}
+html body {height: 100%; margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif}
+/* .wrap::-webkit-scrollbar-track {border-radius: 2px; background-color: #ccc; opacity: 0}
+.wrap::-webkit-scrollbar {width: 0px; background-color: #ccc; opacity: 0; display: none}
+.wrap::-webkit-scrollbar-thumb {border-radius: 2px; background-color: #eee} */
+a {text-decoration: none; color:#475669; cursor: pointer;}
+a:hover {text-decoration: none}
+button {display: inline-block; margin: 0; padding: 0; border: 0; background: none; cursor: pointer; text-align: center; vertical-align: middle; white-space: nowrap}
+button span, button img {position: relative}
+button:focus {outline: none}
+button.disalbed {cursor: default}
+button::-moz-focus-inner {padding: 0; border: 0}
+button span, button img {position: relative}
+button:focus {outline: none}
+button.disalbed {cursor: default}
+button::-moz-focus-inner {padding: 0; border: 0}
+dl {margin: 0; padding: 0}
+dl dt {margin: 0; padding: 0}
+dl dd {margin: 0; padding: 0}
+em {font-style: normal}
+form legend {position: absolute; visibility: hidden; height: 0; overflow: hidden; font-size: 0; line-height: 0}
+form fieldset {margin: 0; padding: 0; border: 0}
+img {vertical-align: top; border:0}
+input {vertical-align: top}
+h1, h2, h3, h4, h5, h6 {margin: 0; padding: 0}
+hr {display: none}
+ul {margin: 0; padding: 0}
+ul li {list-style: none}
+ol {margin: 0; padding: 0}
+ol li {list-style: none}
+p {margin: 0}
+table {width: 100%; table-layout: fixed; border-collapse: collapse}
+table caption {position: absolute; height: 0; visibility: hidden; font-size: 0; line-height: 0}
+table th, table td {padding: 0}
+textarea {padding: 0; resize: none}
+*, *::before, *::after {box-sizing: border-box}
+div {box-sizing: border-box}
+pre, xmp, kbd, samp, code {font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+input, textarea, select, button {font-family: 'Noto Sans KR', sans-serif}
+legend, .offscreen {position: absolute !important; height: 1px; width: 1px; margin:-1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px); word-break: initial; word-wrap: initial}
+.skip_nav a {display: inline-block; position: absolute; top: -9999px; left: 0; z-index: 300; margin: 0; padding: 14px 25px; background: #f62a4b; font-size: 15px; color: #fff}
+.skip_nav a:focus {top: 0}

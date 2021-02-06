@@ -1,1 +1,23 @@
-$g100: #666666;
+$g100: rgba(46, 46, 54, 1);
+$g90: rgba(46, 46, 54, 0.9);
+$g80: rgba(46, 46, 54, 0.8);
+$g70: rgba(46, 46, 54, 0.7);
+$g60: rgba(46, 46, 54, 0.6);
+$g50: rgba(46, 46, 54, 0.5);
+$g40: rgba(46, 46, 54, 0.4);
+$g30: rgba(46, 46, 54, 0.3);
+$g25: rgba(46, 46, 54, 0.25);
+$g20: rgba(46, 46, 54, 0.20);
+$g16: rgba(46, 46, 54, 0.16);
+$g12: rgba(46, 46, 54, 0.12);
+$g10: rgba(46, 46, 54, 0.1);
+$g08: rgba(46, 46, 54, 0.08);
+$g04: rgba(46, 46, 54, 0.04);
+$g02: rgba(46, 46, 54, 0.02);
+
+@mixin flex($justify: flex-start, $align: flex-start, $wrap: unset) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}

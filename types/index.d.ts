@@ -1,8 +1,10 @@
 interface TPost {
-  title: string;
-  body: string;
-  tags: Array<string>;
-  published_date: string;
+  id: number;
+  post_title: string;
+  post_body: string;
+  post_image: string;
+  published_at: string;
+  type?: string;
 }
 
 export { TPost }
