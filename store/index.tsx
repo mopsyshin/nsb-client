@@ -1,7 +1,11 @@
+import config from '@/config/config'
+import { TPost, TPostsResponse } from '@/types'
+import { fetcher } from '@/utils'
 import {
   atom,
   useRecoilState,
 } from 'recoil'
+import useSWR from 'swr'
 
 const initState = atom({
   key: 'init',
@@ -25,7 +29,7 @@ const postsState = atom({
 
 const menuItemsState = atom({
   key: 'menuItems',
-  default: ['popularPosts', 'category', 'about']
+  default: ['Popular Posts', 'Category', 'About']
 })
 
 const useStore = () => {

@@ -1,22 +1,19 @@
 import useStore from '@/store'
 import classNames from 'classnames/bind'
-import config from '@/config/config'
-import useSWR from 'swr'
-import { fetcher } from '@/utils'
 import { useEffect } from 'react'
 import styles from './Layout.module.scss'
 import Router from 'next/router'
 import PostList from '@/components/post-list'
+import { TPostsResponse } from '@/types'
+import service from '@/service'
+import { LinkWrapper } from '@/components'
+import TabMenu from '@/components/tab-menu/TabMenu'
 
 const cx = classNames.bind(styles)
 
 const Layout: React.FC = ({children}) => {
-  const { init, setInit, menuItems, setPosts, setIsLoading, currentTab, setCurrentTab } = useStore()
-  const { data } = useSWR(`${config.API_URL}/posts?_sort=published_at:DESC`, fetcher)
-
-  useEffect(() => {
-    setPosts(data)
-  }, [data])
+  const { init, setInit, menuItems, setIsLoading, currentTab, setCurrentTab } = useStore()
+  const { posts }: TPostsResponse = service.post.usePosts('?_sort=published_at:DESC')
 
   useEffect(() => {
     if (!init) {
@@ -37,18 +34,18 @@ const Layout: React.FC = ({children}) => {
 
   const SideContent: React.FC = () => {
     switch (currentTab) {
-      case 'popularPosts':
+      case 'Popular Posts':
         return (
           <>
             <h2>Popular post</h2>
-            <PostList posts={data} type="small"/>
+            <PostList posts={posts} type="small"/>
           </>
         )
-      case 'category':
+      case 'Category':
         return (
           <>category</>
         )
-      case 'about':
+      case 'About':
         return (
           <>about</>
         )
@@ -61,18 +58,16 @@ const Layout: React.FC = ({children}) => {
 
   return (
     <div className={cx('container')}>
+      <div className={cx('logo')}>
+        <LinkWrapper href="/">
+          <img src="/assets/ic_home.svg"/>
+        </LinkWrapper>
+      </div>
       <div className={cx('content-pane')}>
         {children}
       </div>
       <div className={cx('side-pane')}>
-        <div className={cx('tab-menu')}>
-          {menuItems.map((item: string) => (
-            <div className={cx('menu-item', item === currentTab ? 'focused' : '')} onClick={() => {setCurrentTab(item)}} key={item}>
-              {item}
-            </div>
-          )
-        )}
-        </div>
+        <TabMenu/>
         <div className={cx('side-content')}>
           <SideContent/>
         </div>

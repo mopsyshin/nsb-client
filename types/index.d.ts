@@ -8,9 +8,27 @@ interface TPost {
   type?: string;
 }
 
+interface TPostResponse {
+  post: TPost,
+  isLoading: boolean,
+  isError: boolean
+}
+
+interface TPostsResponse {
+  posts: Array<TPost>,
+  isLoading: boolean,
+  isError: boolean
+}
+
 interface TMenuItem {
   menu_name: string,
   focused: boolean,
 }
 
-export { TPost, TMenuItem }
+interface TPostsResponse {
+  posts: Array<TPost>,
+  isLoading: boolean,
+  isError: boolean
+}
+
+export { TPost, TMenuItem, TPostResponse, TPostsResponse }

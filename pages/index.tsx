@@ -1,17 +1,17 @@
-import { TPost } from '@/types'
+import { TPost, TPostsResponse } from '@/types'
 import config from '@/config/config'
 import { fetcher } from '@/utils'
 import Layout from '@/layout'
 import MainPane from '@/components/main-pane'
-import useStore from '@/store'
+import service from '@/service'
 
 const Home: React.FC<{data: Array<TPost>}> = props => {
-  const { posts } = useStore()
-  const initialData: Array<TPost> | undefined = posts ? posts : props.data
+  const { posts, isLoading, isError }: TPostsResponse = service.post.usePosts('?_sort=published_at:DESC')
+  const data: Array<TPost> | undefined = props.data ? props.data : posts
 
   return (
     <Layout>
-      <MainPane posts={initialData}/>
+      <MainPane posts={data}/>
     </Layout>
   )
 }
