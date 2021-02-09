@@ -1,0 +1,51 @@
+.container {
+  min-height: 100vh;
+  max-width: 80rem;
+  padding: 0 1.5rem 2rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  .content-pane {
+    width: 48rem;
+    margin-right: 1rem;
+  }
+  .side-pane {
+    position: fixed;
+    left: calc(50vw + 10rem);
+    width: 27.5rem;
+    min-height: 60rem;
+    background-color: $g04;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+    h2 {
+      padding: 1rem 1rem 0.5rem;
+      color: $g40;
+    }
+    .tab-menu {
+      @include flex(flex-start, center);
+      padding: 1rem 1.5rem;
+      .menu-item {
+        margin-right: 0.5rem;
+        display: block;
+        background-color: $g08;
+        padding: 0.6rem 1rem;
+        border-radius: 1.5rem;
+        transition: all 0.3s;
+        font-size: 0.8rem;
+        cursor: pointer;
+        &:nth-last-child(1) {
+          margin: 0;
+        }
+        &:hover {
+          background-color: $g12;
+        }
+        &.focused {
+          background-color: $positive;
+          color: $w100;
+        }
+      }
+    }
+  }
+}

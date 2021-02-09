@@ -15,9 +15,36 @@ $g08: rgba(46, 46, 54, 0.08);
 $g04: rgba(46, 46, 54, 0.04);
 $g02: rgba(46, 46, 54, 0.02);
 
+$w100: rgba(255,255,255, 1);
+$w90: rgba(255,255,255, 0.9);
+$w80: rgba(255,255,255, 0.8);
+$w70: rgba(255,255,255, 0.7);
+$w60: rgba(255,255,255, 0.6);
+$w50: rgba(255,255,255, 0.5);
+$w40: rgba(255,255,255, 0.4);
+$w30: rgba(255,255,255, 0.3);
+$w20: rgba(255,255,255, 0.2);
+$w10: rgba(255,255,255, 0.1);
+$w05: rgba(255,255,255, 0.05);
+
+$positive: #4a47ff;
+$link: #00c298;
+
+$fb: #4680ff;
+$insta: #d33496;
+$github: #353434;
+
+$zLoadingBar: 1000;
+
 @mixin flex($justify: flex-start, $align: flex-start, $wrap: unset) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   flex-wrap: $wrap;
+}
+
+@mixin bg-center() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

@@ -1,0 +1,117 @@
+.post-item {
+  padding: 1rem;
+  color: $g80;
+  @include flex(flex-start, stretch);
+  .post-image {
+    width: 9rem;
+    height: 9rem;
+    margin-right: 1rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+  }
+  .post-info {
+    max-width: calc(100% - 10rem);
+    @include flex(space-between);
+    flex-direction: column;
+    height: 9rem;
+    .post-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+    .post-body {
+      color: $g60;
+      line-height: 1.5;
+    }
+    .date {
+      color: $g40;
+      font-size: 0.8rem;
+    }
+  }
+  &.hero {
+    padding: 1.5rem;
+    .post-image {
+      width: 20rem;
+      height: 20rem;
+    }
+    .post-info {
+      max-width: calc(100% - 21rem);
+      height: 20rem;
+      .post-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &.small {
+    .post-image {
+      width: 6rem;
+      height: 6rem;
+    }
+    .post-info {
+      max-width: calc(100% - 7rem);
+      height: 8rem;
+      .post-title {
+        font-size: 1.1rem;
+      }
+      .post-body {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  &.placeholder {
+    .post-image {
+      animation: loadingBlink 3s infinite;
+      background-color: $g10;
+    }
+    .post-info {
+      width: 90%;
+      .content {
+        width: 90%;
+      }
+      .post-title {
+        height: 2rem;
+        background-color: $g10;
+        animation: loadingBlink 3s 0.5s infinite;
+        border-radius: 1rem;
+      }
+      .post-body {
+        .body-line {
+          height: 1rem;
+          background-color: $g10;
+          animation: loadingBlink 3s 0.8s infinite;
+          border-radius: 0.5rem;
+          margin-bottom: 0.3rem;
+          width: 90%;
+          &:nth-child(2) {
+            width: 50%;
+          }
+          &:nth-child(3) {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes loadingBlink {
+  0% {
+    background-color: $g10;
+  }
+  20% {
+    background-color: $g08;
+  }
+  50% {
+    background-color: $g04;
+  }
+  80% {
+    background-color: $g08;
+  }
+  100% {
+    background-color: $g10;
+  }
+}

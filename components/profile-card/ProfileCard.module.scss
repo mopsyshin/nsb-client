@@ -1,0 +1,49 @@
+.profile-card {
+  @include flex(flex-start, center);
+  padding: 2rem;
+  .profile-image {
+    width: 6.5rem;
+    height: 6.5rem;
+    background-color: $g08;
+    border-radius: 4rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .info {
+    max-width: calc(100% - 8rem);
+    .top {
+      @include flex(flex-start, center);
+      .user-name {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: $g80;
+      }
+      .social {
+        @include flex(flex-start, center);
+        margin-left: 1rem;
+        .social-item {
+          width: 0.5rem;
+          height: 0.5rem;
+          border-radius: 0.25rem;
+          background-color: $g12;
+          margin-right: 0.5rem;
+          cursor: pointer;
+          &.fb {
+            background-color: $fb;
+          }
+          &.insta {
+            background-color: $insta;
+          }
+          &.github {
+            background-color: $github;
+          }
+        }
+      }
+    }
+    .description {
+      color: $g50;
+    }
+  }
+}
