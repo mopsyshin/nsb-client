@@ -19,7 +19,7 @@ const loadingState = atom({
 
 const currentTabState = atom({
   key: 'currentTab',
-  default: 'popularPosts',
+  default: 'Popular Posts',
 })
 
 const postsState = atom({

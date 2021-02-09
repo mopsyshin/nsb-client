@@ -12,7 +12,7 @@ import TabMenu from '@/components/tab-menu/TabMenu'
 const cx = classNames.bind(styles)
 
 const Layout: React.FC = ({children}) => {
-  const { init, setInit, menuItems, setIsLoading, currentTab, setCurrentTab } = useStore()
+  const { init, setInit, setIsLoading, currentTab } = useStore()
   const { posts }: TPostsResponse = service.post.usePosts('?_sort=published_at:DESC')
 
   useEffect(() => {

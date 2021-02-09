@@ -31,4 +31,15 @@ interface TPostsResponse {
   isError: boolean
 }
 
-export { TPost, TMenuItem, TPostResponse, TPostsResponse }
+
+interface TConfig {
+  API_URL: string;
+}
+
+export { 
+  TPost, 
+  TMenuItem, 
+  TPostResponse, 
+  TPostsResponse, 
+  TConfig,
+}
