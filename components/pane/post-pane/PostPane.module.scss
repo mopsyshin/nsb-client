@@ -28,7 +28,8 @@
       color: $link;
     }
     p {
-      margin: 0.3em 0;
+      line-height: 1.7;
+      margin: 0.6rem 0;
     }
     img {
       margin: 2rem 0;
@@ -123,30 +124,17 @@
     }
     blockquote {
       position: relative;
-      text-align: center;
       margin: 0px;
-      background: none;
-      padding: 24px 0px 0px !important;
-      border-width: initial !important;
-      border-style: none !important;
-      border-color: initial !important;
-      border-image: initial !important;
+      background-color: $w100;
+      padding: 16px 48px 16px 24px !important;
+      margin: 16px 0px !important;
+      border-left: 4px solid $positive;
+      border-radius: 0px 16px 16px 0px;
+      text-align: left;
       p {
-        color: #555555;
-        line-height: 1.5em;
+        color: $g70;
+        line-height: 1.7;
         letter-spacing: -0.2px;
-      }
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        top: 0px;
-        left: 50%;
-        margin-left: -12px;
-        // background: url("/ic_quote.png") 0% 0% / cover no-repeat;
-        background-repeat: no-repeat;
       }
     }
   }
