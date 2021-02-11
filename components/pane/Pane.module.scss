@@ -1,3 +1,15 @@
+.section {
+  background-color: $g04;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.section-title {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem 0rem;
+  font-weight: 600;
+  color: $g40;
+}
+
 .side-pane {
   position: fixed;
   left: calc(50vw + 10rem);

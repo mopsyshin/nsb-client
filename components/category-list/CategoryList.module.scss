@@ -16,5 +16,9 @@
     &:hover {
       background-color: $g12;
     }
+    &.active {
+      background-color: $positive;
+      color: $w100;
+    }
   }
 }

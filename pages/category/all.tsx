@@ -1,17 +1,17 @@
 import { TPost, TPostsResponse } from '@/types'
 import config from '@/config/config'
+import CategoryPane from "@/components/pane/category-pane/CategoryPane"
+import Layout from "@/layout/default"
 import { fetcher } from '@/utils'
-import Layout from '@/layout/default'
-import MainPane from '@/components/pane/main-pane/MainPane'
 import service from '@/service'
 
-const Home: React.FC<{data: Array<TPost>}> = props => {
+const AllPost: React.FC<{data: Array<TPost>}> = props => {
   const { posts }: TPostsResponse = service.post.usePosts('?_sort=published_at:DESC')
   const data: Array<TPost> | undefined = props.data ? props.data : posts
 
   return (
     <Layout>
-      <MainPane posts={data}/>
+      <CategoryPane posts={data} category_name="전체"/>
     </Layout>
   )
 }
@@ -23,4 +23,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default Home
+export default AllPost

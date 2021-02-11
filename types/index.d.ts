@@ -35,6 +35,11 @@ interface TCategoriesResponse {
   isLoading: boolean;
   isError: boolean;
 }
+interface TCategoryResponse {
+  category: TCategory
+  isLoading: boolean;
+  isError: boolean;
+}
 
 interface TConfig {
   API_URL: string;
@@ -45,6 +50,7 @@ export {
   TPostResponse, 
   TPostsResponse, 
   TCategory,
+  TCategoryResponse,
   TCategoriesResponse,
   TMenuItem, 
   TConfig,

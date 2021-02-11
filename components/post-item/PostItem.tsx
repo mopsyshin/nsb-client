@@ -15,7 +15,7 @@ const PostItem: React.FC<TPost> = props => {
   const maxString = useMemo(() => {
     switch (type) {
       case 'hero':
-        return 250
+        return 200
       case 'small':
         return 50
       default: 

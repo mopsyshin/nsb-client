@@ -1,6 +1,6 @@
 import useStore from '@/store'
 import classNames from 'classnames/bind'
-import styles from './SidePane.module.scss'
+import styles from '../Pane.module.scss'
 import PostList from '@/components/post-list/PostList'
 import { TCategoriesResponse, TPostsResponse } from '@/types'
 import service from '@/service'
@@ -32,7 +32,12 @@ const SidePane:React.FC = () => {
         )
       case 'About':
         return (
-          <>about</>
+          <>
+            <h2>About</h2>
+            <div className={cx('about')}>
+
+            </div>
+          </>
         )
       default:
         return <>default</>

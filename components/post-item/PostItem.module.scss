@@ -5,8 +5,9 @@
   cursor: pointer;  
   background-color: transparent;
   transition: all 0.4s;
+  border-radius: 1rem;
   &:hover {
-    background-color: $g04;
+    background-color: $g08;
   }
   .post-image {
     width: 9rem;
@@ -38,7 +39,6 @@
     }
   }
   &.hero {
-    padding: 1.5rem;
     .post-image {
       width: 20rem;
       height: 20rem;
