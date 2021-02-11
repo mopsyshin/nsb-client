@@ -1,4 +1,4 @@
-import Layout from "@/layout"
+import Layout from "@/layout/default"
 
 const AboutMain: React.FC = () => {
   return (

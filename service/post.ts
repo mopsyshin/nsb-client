@@ -5,7 +5,7 @@ import useSWR from "swr"
 const post = {
   usePosts: (params: string = "") => {
     const { data, error } = useSWR(`${config.API_URL}/posts${params}`, fetcher)
-  
+    console.log(data)
     return {
       posts: data,
       isLoading: !error && !data,

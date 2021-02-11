@@ -25,12 +25,16 @@ interface TMenuItem {
   focused: boolean,
 }
 
-interface TPostsResponse {
-  posts: Array<TPost>,
-  isLoading: boolean,
-  isError: boolean
+interface TCategory {
+  id: number;
+  category_name: string,
 }
 
+interface TCategoriesResponse {
+  categories: Array<TCategory>
+  isLoading: boolean;
+  isError: boolean;
+}
 
 interface TConfig {
   API_URL: string;
@@ -38,8 +42,10 @@ interface TConfig {
 
 export { 
   TPost, 
-  TMenuItem, 
   TPostResponse, 
   TPostsResponse, 
+  TCategory,
+  TCategoriesResponse,
+  TMenuItem, 
   TConfig,
 }

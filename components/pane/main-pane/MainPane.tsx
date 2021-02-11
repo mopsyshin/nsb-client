@@ -1,10 +1,8 @@
 import classNames from 'classnames/bind'
 import styles from './Main.module.scss'
-import PostItem from '@/components/post-item'
-import ProfileCard from '@/components/profile-card'
+import ProfileCard from '@/components/profile-card/ProfileCard'
 import { TPost } from '@/types'
-import Post from '@/pages/post/[id]'
-import PostList from '../post-list'
+import PostList from '@/components/post-list/PostList'
 
 const cx = classNames.bind(styles)
 

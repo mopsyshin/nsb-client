@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind'
-import styles from './PostDetail.module.scss'
+import styles from './PostPane.module.scss'
 import { TPost } from '@/types'
 import ReactMarkdown from 'react-markdown'
 import dayjs from 'dayjs'

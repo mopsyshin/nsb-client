@@ -1,8 +1,8 @@
 import { TPost } from '@/types'
 import config from '@/config/config'
 import { fetcher } from '@/utils'
-import Layout from '@/layout'
-import PostDetail from '@/components/post-detail'
+import Layout from '@/layout/default'
+import PostPane from '@/components/pane/post-pane/PostPane'
 import { GetServerSideProps } from 'next'
 import service from '@/service'
 
@@ -12,7 +12,7 @@ const Post: React.FC<{data?: TPost, id: string}> = props => {
 
   return (
     <Layout>
-      <PostDetail {...initialData}/>
+      <PostPane {...initialData}/>
     </Layout>
   )
 }

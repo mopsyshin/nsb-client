@@ -1,0 +1,15 @@
+.side-pane {
+  position: fixed;
+  left: calc(50vw + 10rem);
+  width: 27.5rem;
+  min-height: 60rem;
+  background-color: $g04;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding-top: 0.5rem;
+  padding-bottom: 4rem;
+  h2 {
+    padding: 1rem 1rem 0.5rem;
+    color: $g40;
+  }
+}

@@ -1,11 +1,4 @@
-import config from '@/config/config'
-import { TPost, TPostsResponse } from '@/types'
-import { fetcher } from '@/utils'
-import {
-  atom,
-  useRecoilState,
-} from 'recoil'
-import useSWR from 'swr'
+import { atom, useRecoilState } from 'recoil'
 
 const initState = atom({
   key: 'init',

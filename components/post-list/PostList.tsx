@@ -1,6 +1,6 @@
 import PostItemPlaceholder from '@/components/post-item/PostItemPlaceholder'
 import { TPost } from '@/types'
-import PostItem from '@/components/post-item'
+import PostItem from '@/components/post-item/PostItem'
 
 const PostList: React.FC<{ posts?: Array<TPost>, type: string }> = ({ posts, type = "normal"}) => {
   return (

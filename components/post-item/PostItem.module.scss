@@ -2,6 +2,12 @@
   padding: 1rem;
   color: $g80;
   @include flex(flex-start, stretch);
+  cursor: pointer;  
+  background-color: transparent;
+  transition: all 0.4s;
+  &:hover {
+    background-color: $g04;
+  }
   .post-image {
     width: 9rem;
     height: 9rem;

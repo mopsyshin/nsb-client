@@ -1,8 +1,8 @@
 import { TPost, TPostsResponse } from '@/types'
 import config from '@/config/config'
 import { fetcher } from '@/utils'
-import Layout from '@/layout'
-import MainPane from '@/components/main-pane'
+import Layout from '@/layout/default'
+import MainPane from '@/components/pane/main-pane/MainPane'
 import service from '@/service'
 
 const Home: React.FC<{data: Array<TPost>}> = props => {

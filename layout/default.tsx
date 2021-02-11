@@ -3,17 +3,13 @@ import classNames from 'classnames/bind'
 import { useEffect } from 'react'
 import styles from './Layout.module.scss'
 import Router from 'next/router'
-import PostList from '@/components/post-list'
-import { TPostsResponse } from '@/types'
-import service from '@/service'
 import { LinkWrapper } from '@/components'
-import TabMenu from '@/components/tab-menu/TabMenu'
+import SidePane from '@/components/pane/side-pane/SidePane'
 
 const cx = classNames.bind(styles)
 
 const Layout: React.FC = ({children}) => {
   const { init, setInit, setIsLoading, currentTab } = useStore()
-  const { posts }: TPostsResponse = service.post.usePosts('?_sort=published_at:DESC')
 
   useEffect(() => {
     if (!init) {
@@ -32,30 +28,6 @@ const Layout: React.FC = ({children}) => {
     setInit(true)
   }, [])
 
-  const SideContent: React.FC = () => {
-    switch (currentTab) {
-      case 'Popular Posts':
-        return (
-          <>
-            <h2>Popular post</h2>
-            <PostList posts={posts} type="small"/>
-          </>
-        )
-      case 'Category':
-        return (
-          <>category</>
-        )
-      case 'About':
-        return (
-          <>about</>
-        )
-      default:
-        return <>default</>
-    }
-  }
-
-  
-
   return (
     <div className={cx('container')}>
       <div className={cx('logo')}>
@@ -66,12 +38,7 @@ const Layout: React.FC = ({children}) => {
       <div className={cx('content-pane')}>
         {children}
       </div>
-      <div className={cx('side-pane')}>
-        <TabMenu/>
-        <div className={cx('side-content')}>
-          <SideContent/>
-        </div>
-      </div>
+      <SidePane/>
     </div>
   )
 }
