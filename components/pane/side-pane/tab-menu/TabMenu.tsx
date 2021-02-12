@@ -1,11 +1,13 @@
-import useStore from '@/store'
+import { currentTabState, menuItemsState } from '@/store'
 import classNames from 'classnames/bind'
+import { useRecoilState, useRecoilValue } from 'recoil'
 import styles from './TabMenu.module.scss'
 
 const cx = classNames.bind(styles)
 
 const TabMenu: React.FC = () => {
-  const { menuItems, currentTab, setCurrentTab } = useStore()
+  const [ currentTab, setCurrentTab ] = useRecoilState(currentTabState)
+  const menuItems = useRecoilValue(menuItemsState)
   return (
     <div className={cx('tab-menu')}>
       {menuItems.map((item: string) => (

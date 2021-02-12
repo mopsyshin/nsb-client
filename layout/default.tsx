@@ -1,15 +1,17 @@
-import useStore from '@/store'
+import { initState, loadingState } from '@/store'
 import classNames from 'classnames/bind'
 import { useEffect } from 'react'
 import styles from './Layout.module.scss'
 import Router from 'next/router'
 import { LinkWrapper } from '@/components'
 import SidePane from '@/components/pane/side-pane/SidePane'
+import { useRecoilState, useSetRecoilState } from 'recoil'
 
 const cx = classNames.bind(styles)
 
 const Layout: React.FC = ({children}) => {
-  const { init, setInit, setIsLoading, currentTab } = useStore()
+  const [ init, setInit ] = useRecoilState(initState)
+  const setIsLoading = useSetRecoilState(loadingState)
 
   useEffect(() => {
     if (!init) {

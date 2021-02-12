@@ -1,4 +1,4 @@
-import useStore from '@/store'
+import { currentTabState } from '@/store'
 import classNames from 'classnames/bind'
 import styles from '../Pane.module.scss'
 import PostList from '@/components/post-list/PostList'
@@ -6,11 +6,12 @@ import { TCategoriesResponse, TPostsResponse } from '@/types'
 import service from '@/service'
 import TabMenu from './tab-menu/TabMenu'
 import CategoryList from '@/components/category-list/CategoryList'
+import { useRecoilValue } from 'recoil'
 
 const cx = classNames.bind(styles)
 
 const SidePane:React.FC = () => {
-  const { currentTab } = useStore()
+  const currentTab = useRecoilValue(currentTabState)
   const { posts }: TPostsResponse = service.post.usePosts('?_sort=published_at:DESC')
   const { categories }: TCategoriesResponse = service.category.useCategories('?_sort=published_at:DESC')
 

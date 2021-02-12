@@ -1,14 +1,15 @@
 import styles from './LoadingBar.module.scss'
 import classNames from 'classnames/bind'
 import { useState, useEffect } from 'react';
-import useStore from '@/store';
+import { loadingState } from '@/store';
+import { useRecoilValue } from 'recoil';
 
 const cx = classNames.bind(styles)
 
 const LoadingBar: React.FC = () => {
-  const { isLoading } = useStore()
-  const [ mounted, setMounted ] = useState(false);
-  const [ completed, setCompleted ] = useState(false);
+  const isLoading = useRecoilValue(loadingState)
+  const [ mounted, setMounted ] = useState(false)
+  const [ completed, setCompleted ] = useState(false)
 
   useEffect(() => {
     if (isLoading) {
