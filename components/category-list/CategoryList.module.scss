@@ -19,6 +19,7 @@
     &.active {
       background-color: $positive;
       color: $w100;
+      position: absolute;
     }
   }
 }

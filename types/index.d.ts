@@ -20,14 +20,15 @@ interface TPostsResponse {
   isError: boolean
 }
 
-interface TMenuItem {
-  menu_name: string,
-  focused: boolean,
-}
-
 interface TCategory {
   id: number;
   category_name: string,
+}
+
+interface TCategoryResponse {
+  category: TCategory
+  isLoading: boolean;
+  isError: boolean;
 }
 
 interface TCategoriesResponse {
@@ -35,14 +36,14 @@ interface TCategoriesResponse {
   isLoading: boolean;
   isError: boolean;
 }
-interface TCategoryResponse {
-  category: TCategory
-  isLoading: boolean;
-  isError: boolean;
-}
 
 interface TConfig {
   API_URL: string;
+}
+
+interface TMenuItem {
+  menu_name: string,
+  focused: boolean,
 }
 
 export { 
