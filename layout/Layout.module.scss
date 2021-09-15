@@ -1,0 +1,27 @@
+.container {
+  min-height: 100vh;
+  max-width: 80rem;
+  padding: 0 1.5rem 2rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(center, center);
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    width: 48px;
+    height: 48px;
+    background-color: $g04;
+    border-radius: 1rem;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .content-pane {
+    width: 48rem;
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,25 @@
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  & > div {
+    margin-right: 8px;
+    margin-bottom: 12px;
+  }
+  .category-item {
+    font-size: 12px;
+    background-color: $g08;
+    padding: 6px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover {
+      background-color: $g12;
+    }
+    &.active {
+      background-color: $positive;
+      color: $w100;
+      position: absolute;
+    }
+  }
+}

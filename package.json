@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@types/classnames": "^2.2.11",
+    "@types/qs": "^6.9.5",
     "@types/remove-markdown": "^0.1.1",
     "classnames": "^2.2.6",
     "dayjs": "^1.10.4",
     "next": "10.0.6",
+    "qs": "^6.9.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-markdown": "^5.0.3",

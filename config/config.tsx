@@ -1,6 +1,4 @@
-interface TConfig {
-  API_URL: string;
-}
+import { TConfig } from '@/types'
 
 const config: TConfig = {
   API_URL: 'http://localhost:1337',

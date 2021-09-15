@@ -1,0 +1,53 @@
+.loading-bar {
+  display: block;
+  z-index: $zLoadingBar;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  overflow: hidden;
+  .bar {
+    width: 0px;
+    height: 3px;
+    opacity: 0.1;
+    background-color: $positive;
+    transition: all 0.2s;
+    &.loading {
+      width: 30%;
+      opacity: 1;
+      animation: loading 8s forwards;
+    }
+    &.completed {
+      animation: complete 0.6s forwards;
+    }
+    @keyframes loading {
+      0% {
+        width: 0px;
+        opacity: 0.1;
+      }
+      10% {
+        width: 40%;
+        opacity: 1;
+      }
+      100% {
+        width: 50%;
+        opacity: 1;
+      }
+    }
+    @keyframes complete {
+      0% {
+        width: 50%;
+        opacity: 0.1;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        width: 120%;
+        opacity: 0.1;
+      }
+    }
+  }  
+}
+
